@@ -1,0 +1,22 @@
+.btn{
+    @include translate3d(0,0,0);
+    position: relative;
+    overflow: hidden;
+    &:before{
+        @include translateX(-110%);
+        @include transition(none);
+        position: absolute;
+        top: 50%;
+        bottom: 48%;
+        left: 0;
+        width: 100%;
+        content: '';
+        background: $color1;
+    }
+    &:hover{
+        &:before{
+            @include transition(transform .75s);
+            @include translateX(110%);
+        }
+    }
+}

@@ -1,0 +1,145 @@
+
+
+/* http://www.transformicons.com/ */
+.tcon-row .tcon-row__items .tcon {
+    margin: 0 6px;
+}
+.tcon-menu--xcross {
+    width: auto;
+}
+.tcon {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    transition: .3s;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines {
+    background: transparent;
+}
+.tcon-transform .tcon-menu__lines {
+    -webkit-transform: scale3d(.8, .8, .8);
+            transform: scale3d(.8, .8, .8);
+}
+.tcon-menu__lines {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    width: 40px;
+    height: 3px;
+    transition: .3s;
+    border-radius: 0;
+    background: $color2;
+}
+.tcon > * {
+    display: block;
+}
+.tcon {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    transition: .3s;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+            transform: rotate3d(0, 0, 1, 45deg);
+}
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before, .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+    top: 0;
+    width: 40px;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.tcon-menu__lines::before {
+    top: 10px;
+}
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 40px;
+    width: 100%;
+    height: 3px;
+    content: '';
+    transition: .3s;
+    -webkit-transform-origin: 2.85714px center;
+            transform-origin: 2.85714px center;
+    border-radius: 0;
+    background: $color2;
+}
+*:before, *:after {
+    box-sizing: inherit;
+}
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+            transform: rotate3d(0, 0, 1, -45deg);
+}
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before, .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+    top: 0;
+    width: 40px;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.tcon-menu__lines::after {
+    top: -10px;
+}
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 40px;
+    width: 100%;
+    height: 3px;
+    content: '';
+    transition: .3s;
+    -webkit-transform-origin: 2.85714px center;
+            transform-origin: 2.85714px center;
+    border-radius: 0;
+    background: $color2;
+}
+*:before, *:after {
+    box-sizing: inherit;
+}

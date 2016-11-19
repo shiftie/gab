@@ -1,0 +1,27 @@
+// Pimcore edit mode CSS overrides
+
+body#ext-gen3{
+    background: white;
+    overflow: auto !important;
+    .pimcore_editable.pimcore_tag_image{
+        max-width: 500px;
+    }
+    .input{
+        width: 500px;
+    }
+    .project{
+        h1{
+    		transform: none;
+    		position: static;
+    	}
+        header{
+            width: auto;
+            height: auto;
+        }
+        .responsive-bg{
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    }
+}

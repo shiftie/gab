@@ -1,0 +1,58 @@
+.menu{
+    @include transition(color .5s);
+    position: fixed;
+    z-index: 10;
+    top: 5vh;
+    right: 5vh;
+    left: 15vh;
+    text-align: right;
+    overflow: visible;
+    padding-top: .5em;
+    padding-right: 2em;
+    color: $color1;
+    font-weight: bold;
+    ul, li, a{
+        line-height: 1em;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        float: right;
+    }
+    li{
+        display: inline-block;
+        vertical-align: top;
+        overflow: visible;
+        position: relative;
+    }
+    a, .contact-panel, .logo{
+        @extend .btn;
+        font-size: $fz-s;
+        display: inline-block;
+        padding: 1em;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        line-height: 1em;
+    }
+    .contact-panel{
+        cursor: pointer;
+    }
+    .contact-panel, .navigation, .logo{
+        //float: right;
+    }
+    .logo{
+        padding-left: 0;
+    }
+    &.light{
+        color: $color2;
+    }
+    @media #{$medium-down}{
+        left: 5vh;
+        padding-right: 0;
+        .contact-panel{
+            padding-right: 0;
+        }
+    }
+}

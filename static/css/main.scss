@@ -1,0 +1,43 @@
+// Base  Setup
+@import 'vendor/foundation/scss/normalize';
+@import 'foundation';
+@import 'compass/css3';
+
+// Config File
+@import 'config';
+
+// Pages
+@import 'fonts/stylesheet';
+@import 'partials/buttons';
+@import 'partials/parallax-slideshow';
+@import 'partials/menu';
+@import 'partials/contact';
+@import 'partials/transformicons';
+@import 'partials/project';
+
+html, body{
+    -webkit-user-drag: none;
+}
+
+body{
+    @include transition(background .5s);
+    font-family: $font1;
+    font-size: $fz-m;
+    *{
+        overflow: hidden;
+    }
+    &.page-home{
+        background: $color2;
+        overflow: hidden;
+    }
+    &.page-project{
+        height: auto;
+        background: darken($color2, 5%);
+    }
+}
+
+.row{
+    &.long{
+        max-width: 1600px;
+    }
+}

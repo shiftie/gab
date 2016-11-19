@@ -1,0 +1,177 @@
+.parallax-slideshow{
+    min-height: 100vh;
+    background: url(/static/img/bg-home.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    .responsive-bg{
+        background-position: right top;
+        background-size: cover;
+        picture{
+            @include opacity(0);
+            pointer-events: none;
+        }
+    }
+
+    .description{
+        width: 290px;
+        margin: 0 auto;
+    }
+
+    .wrapper, .cover, .cover-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120vw;
+        height: 120vh;
+        a{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .content, .content-container, .content-wrapper{
+        z-index: 3;
+        left: 0;
+        width: 33vw;
+        min-width: 550px;
+        text-align: center;
+        color: $color1;
+        .title{
+            font-family: $font2;
+            font-size: $fz-xxxl;
+            line-height: 1em;
+        }
+    }
+
+    .content-container, .content-wrapper{
+        @include display-flex();
+        @include flex-direction(column);
+        @include justify-content(center);
+        position: absolute;
+    }
+
+    .content-wrapper{
+        @include translateY(0);
+        @include opacity(0);
+        top: 5vh;
+        bottom: 5vh;
+        background: $color2;
+        .content-container:nth-child(1){
+            @include opacity(1);
+        }
+    }
+
+    .content-container{
+        @include opacity(0);
+        top: 0;
+        bottom: 0;
+    }
+
+    .content{
+        @include translateY(0);
+        padding: 100px;
+    }
+
+    .goto-project{
+        @include translateX(-50%);
+        text-decoration: none;
+        color: $bodyColor;
+        position: absolute;
+        bottom: 10vh;
+        left: 50%;
+        z-index: 3;
+        &:after{
+            content: '\2192';
+            display: block;
+        }
+    }
+
+    .wrapper{
+        //@include transition(opacity .5s ease-out);
+        @include opacity(0);
+        clip: rect(0vh 100vw 120vh 16.5vw);
+        z-index: 0;
+        width: 100vw;
+        max-height: 100vh;
+        &:nth-child(n+2){
+            //@include transition(opacity 0s .5s);
+        }
+        &.current{
+            z-index: 2;
+        }
+        &.future{
+            z-index: 1;
+        }
+    }
+    &.ready{
+        .wrapper, .content-wrapper{
+            @include opacity(1);
+        }
+    }
+
+    &:after{
+        @include transition(opacity .25s);
+        @include opacity(0);
+        pointer-events: none;
+        content: '';
+        background: rgba(white, .5) url(/static/img/spinner.svg) no-repeat center center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    &.loading{
+        &:after{
+            @include opacity(1);
+        }
+    }
+
+    @media #{$medium-down}{
+        .content-wrapper, .content-container, .content{
+            left: 0;
+            width: 90vw;
+            min-width: 0;
+        }
+        .content-wrapper{
+            top: 60vh;
+            bottom: 0;
+            left: 5vw;
+        }
+        .content{
+            padding: 50px;
+        }
+        .cover-container, .cover{
+            height: 80vh;
+        }
+        .goto-project{
+            bottom: 5vh;
+        }
+        .wrapper{
+            clip: rect(0vh 100vw 120vh 0vw);
+            height: 66vh;
+        }
+    }
+
+    @media #{$small-only}{
+        .content, .content-container, .content-wrapper{
+            .title{
+                font-size: $fz-xl;
+            }
+            .description{
+                display: none;
+            }
+        }
+    }
+    @media only screen and (max-width: 1650px) and (min-width: 1024px){
+        .wrapper{
+            clip: rect(0vh 100vw 120vh 275px);
+        }
+    }
+}

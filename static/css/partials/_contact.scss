@@ -1,0 +1,100 @@
+.contact{
+    .content{
+        background: $color1;
+        color: $color2;
+        z-index: 5;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        width: 100vw;
+        clip: rect(0vh, 100vw, 100vh, 100vw);
+        .typo{
+            z-index: -1;
+            position: fixed;
+            font-family: $font2;
+            font-size: 320px;
+            line-height: 1em;
+            letter-spacing: .35em;
+        }
+        .typo-1{
+            top: -.3em;
+            left: -.2em;
+        }
+        .typo-2{
+            top: 50%;
+            top: calc(50% - .5em);
+            left: -.15em;
+        }
+        .typo-3{
+            bottom: -.25em;
+            left: 1em;
+            left: calc(1em - 70px);
+        }
+        .text{
+            font-size: 30px;
+            max-width: 730px;
+            text-align: right;
+            position: fixed;
+            line-height: 1.4em;
+            top: 50%;
+            padding: 32px;
+            @include translateY(-50%);
+            @include translateY(calc(-50% + 3*16px));
+            right: 5vw;
+            font-family: $font2Book;
+            &:before{
+                content: '';
+                height: 1px;
+                width: 150px;
+                background: $color2;
+                display: inline-block;
+            }
+        }
+        .links{
+            font-family: $font1;
+            margin-top: 3em;
+            font-size: 1rem;
+            ul{
+                list-style-type: none;
+                padding: 0;
+                li{
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: 2em;
+                    a{
+                        font-size: $fz-s;
+                        color: $color2;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        @media #{$medium-down}{
+            .typo{
+                color: darken($color2, 95%);
+            }
+        }
+        @media #{$small-only}{
+            .text{
+                font-size: 20px;
+            }
+            li{
+                margin-left: 1em !important;
+            }
+            .links{
+                font-size: 14px;
+            }
+        }
+    }
+    .white-bg{
+        background: $color2;
+        z-index: 4;
+        position: fixed;
+        height: 100vh;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        clip: rect(0vh, 100vw, 100vh, 100vw);
+    }
+}

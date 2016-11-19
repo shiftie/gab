@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":[],"mappings":";;;;AAEA,SAAS,gBAAT,CAA0B,kBAA1B,EAA8C,YAAW;AACxD,KAAI,MAAM,IAAI,GAAJ,EAAN,CADoD;AAExD,KAAI,IAAJ,GAFwD;CAAX,CAA9C","file":"main.js","sourcesContent":["/* global App */\n\ndocument.addEventListener('DOMContentLoaded', function() {\n\tlet app = new App();\n\tapp.init();\n});\n"],"sourceRoot":"/source/"}

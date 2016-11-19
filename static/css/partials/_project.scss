@@ -1,0 +1,104 @@
+.project{
+	color: $color1;
+	background-repeat: no-repeat;
+    background-position: center center;
+	header, .responsive-bg{
+		width: 100vw;
+		height: 100vh;
+	}
+	h1{
+		@include translate(-50%, -50%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-family: $font2;
+		font-size: $fz-xxxl;
+		z-index: 1;
+		margin: 0;
+		font-weight: 300;
+	}
+	header{
+		position: relative;
+	}
+	.block{
+		padding: 2em;
+		max-width: 1600px;
+		margin: 0 auto;
+		picture, img{
+			margin: 0 auto;
+			display: block;
+		}
+		&.one{
+			&.full{
+				padding: 2em 0;
+				max-width: none;
+				picture, img{
+					width: 100%;
+				}
+			}
+		}
+		.row{
+			max-width: none;
+		}
+	}
+	.content{
+    	background: darken($color2, 5%);
+    	z-index: 1;
+    	position: relative;
+		padding: 5em 0;
+	}
+	.next-project{
+		background: darken($color2, 5%);
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		padding-bottom: 8em;
+		a{
+			font-size: $fz-xxl;
+			font-family: $font2;
+			color: $color1;
+			text-decoration: none;
+		}
+	}
+    .responsive-bg{
+		position: fixed;
+        background-position: center center;
+        background-size: cover;
+		opacity: .5;
+        picture{
+            @include opacity(0);
+            pointer-events: none;
+        }
+    }
+	.scroll-indicator{
+		@include translateX(-50%);
+		position: absolute;
+		bottom: 3em;
+		left: 50%;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: none;
+    	background: none;
+    	border: 0;
+	}
+
+	@media #{$small-only}{
+		.block{
+			.columns{
+				padding-top: 1em;
+				padding-bottom: 1em;
+			}
+		}
+	}
+	@media #{$medium-only}{
+		.block{
+			&.four{
+				.columns{
+					padding-top: 1em;
+					padding-bottom: 1em;
+				}
+			}
+		}
+	}
+}

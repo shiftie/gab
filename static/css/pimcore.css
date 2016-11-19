@@ -1,0 +1,29 @@
+/* line 3, pimcore.scss */
+body#ext-gen3 {
+  background: white;
+  overflow: auto !important;
+}
+/* line 6, pimcore.scss */
+body#ext-gen3 .pimcore_editable.pimcore_tag_image {
+  max-width: 500px;
+}
+/* line 9, pimcore.scss */
+body#ext-gen3 .input {
+  width: 500px;
+}
+/* line 13, pimcore.scss */
+body#ext-gen3 .project h1 {
+  transform: none;
+  position: static;
+}
+/* line 17, pimcore.scss */
+body#ext-gen3 .project header {
+  width: auto;
+  height: auto;
+}
+/* line 21, pimcore.scss */
+body#ext-gen3 .project .responsive-bg {
+  position: static;
+  width: auto;
+  height: auto;
+}
